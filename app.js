@@ -32,7 +32,7 @@ let uploadRoutes = require('./routes/upload')
 
 
 //Conexion a BD 
-mongoose.connection.openUri(process.env.URLDB, (err, res)=>{
+mongoose.connect(process.env.URLDB, (err, res)=>{
     if(err) throw err;
     console.log('Base de datos');
 });
